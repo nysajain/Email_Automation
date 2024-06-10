@@ -2,7 +2,9 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+# Replace input command with your email address
 sender_emailID = input("Enter your email id: ")
+# Replace inout command with you password/app specific password
 password = input("Enter your password: ")
 receiver_emailID = input("Enter receiver's email id: ")
 subject = input("Enter the subject of the email: ")
