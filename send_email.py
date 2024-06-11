@@ -1,4 +1,5 @@
 import smtplib
+import sys
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
@@ -8,7 +9,8 @@ sender_emailID = input("Enter your email id: ")
 password = input("Enter your password: ")
 receiver_emailID = input("Enter receiver's email id: ")
 subject = input("Enter the subject of the email: ")
-text = input("Enter the body of the email: ")
+print("Enter the body of the email, press crtl + D once finished: ")
+text = sys.stdin.read()
 body = MIMEMultipart()
 body['Subject'] = subject
 body.attach(MIMEText(text))
